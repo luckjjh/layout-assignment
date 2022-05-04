@@ -21,7 +21,7 @@ $border-gray: #bdbdbd;
   font-family: "Roboto", sans-serif;
   margin: 86px auto 0;
   padding: 41px 28px 31px;
-  width: 1060px;
+  max-width: 1060px;
   @include border-rad(lg);
   @include border-solid(2px, $border-gray);
   background-color: $bg-color;
@@ -43,29 +43,31 @@ $border-gray: #bdbdbd;
     display: flex;
     justify-content: space-between;
     margin: 28px auto 0;
-    width: 372px;
+    max-width: 372px;
   }
   .cinema_nav button {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: $font-gray;
-    &:nth-child(1) {
+    &:hover {
+      font-weight: 700;
+    }
+  }
+  .cinema_nav button.btn-focus {
       font-weight: 900;
       color: $font-black;
-    }
   }
   .cinema-list-box {
     font-family: "Noto Sans KR", sans-serif;
     margin-top: 28px;
     padding: 26px 23px 30px;
-    width: 100%;
     @include border-rad(lg);
     background-color: white;
     @include border-solid(2px, $border-gray);
     .cinema-list {
       display: grid;
-      grid-template-columns: repeat(4, minmax(220px, 220px));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 24px 23px;
       li {
         overflow: hidden;
@@ -172,12 +174,18 @@ $border-gray: #bdbdbd;
   }
 }
 
+.footer-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
 .footer {
   font-family: "Roboto", sans-serif;
   background-color: $bg-color;
   margin-top: 135px;
-  padding: 53px 365px 38px;
-  .footer-title {
+  padding: 53px 0 38px;
+  .footer-title{
+    flex-basis: 1190px;
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
@@ -189,11 +197,14 @@ $border-gray: #bdbdbd;
       margin-left: 24px;
       float: right;
     }
+    
   }
   .footer-info {
     font-family: "Noto Sans KR", sans-serif;
     margin-top: 36px;
     display: flex;
+    flex-wrap: wrap;
+    flex-basis: 1190px;
     gap: 10px;
     dl {
       display: flex;
@@ -223,5 +234,25 @@ $border-gray: #bdbdbd;
     div {
       margin-left: auto;
     }
+  }
+}
+
+@media screen and (max-width:1075px){
+  .cont-cinema{
+    max-width: 833px;
+  }
+}
+@media screen and (max-width:833px) {
+  .cont-cinema{
+    max-width: 590px;
+  }
+}
+@media screen and (max-width:590px) {
+  .cont-cinema{
+    max-width: 345px;
+  }
+  .cinema_nav {
+    flex-direction: column;
+    gap: 5px;
   }
 }

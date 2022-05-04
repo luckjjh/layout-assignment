@@ -4,7 +4,7 @@
   font-family: "Roboto", sans-serif;
   margin: 86px auto 0;
   padding: 41px 28px 31px;
-  width: 1060px;
+  max-width: 1060px;
   border-radius: 15px;
   border: 2px solid #bdbdbd;
   -webkit-box-sizing: border-box;
@@ -36,7 +36,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 28px auto 0;
-  width: 372px;
+  max-width: 372px;
 }
 
 .cont-cinema .cinema_nav button {
@@ -46,7 +46,11 @@
   color: #828282;
 }
 
-.cont-cinema .cinema_nav button:nth-child(1) {
+.cont-cinema .cinema_nav button:hover {
+  font-weight: 700;
+}
+
+.cont-cinema .cinema_nav button.btn-focus {
   font-weight: 900;
   color: #000000;
 }
@@ -55,7 +59,6 @@
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 28px;
   padding: 26px 23px 30px;
-  width: 100%;
   border-radius: 15px;
   background-color: white;
   border: 2px solid #bdbdbd;
@@ -66,8 +69,8 @@
 .cont-cinema .cinema-list-box .cinema-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(220px, 220px))[4];
-      grid-template-columns: repeat(4, minmax(220px, 220px));
+  -ms-grid-columns: (minmax(220px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 24px 23px;
 }
 
@@ -308,14 +311,25 @@
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer {
   font-family: "Roboto", sans-serif;
   background-color: #f2f2f2;
   margin-top: 135px;
-  padding: 53px 365px 38px;
+  padding: 53px 0 38px;
 }
 
 .footer .footer-title {
+  -ms-flex-preferred-size: 1190px;
+      flex-basis: 1190px;
   font-weight: 700;
   font-size: 22px;
   line-height: 26px;
@@ -337,6 +351,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 1190px;
+      flex-basis: 1190px;
   gap: 10px;
 }
 
@@ -373,5 +391,30 @@
 
 .footer .footer-info div {
   margin-left: auto;
+}
+
+@media screen and (max-width: 1075px) {
+  .cont-cinema {
+    max-width: 833px;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .cont-cinema {
+    max-width: 590px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .cont-cinema {
+    max-width: 345px;
+  }
+  .cinema_nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
