@@ -120,6 +120,8 @@ $border-gray: #bdbdbd;
               width: 14px;
               height: 14px;
               background-image: url("../img/star.png");
+              // 이부분 padding top으로 비율 밪추는 반응형으로 바꾸기
+              // media query로 그리드 담는 박스 너비 조절하는 코드 없애는 것 가능!
               background-position: center center;
               background-repeat: no-repeat;
               background-size: cover;
