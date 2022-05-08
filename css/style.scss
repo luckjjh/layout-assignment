@@ -70,6 +70,7 @@ $border-gray: #bdbdbd;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 24px 23px;
       li {
+        padding: 0 20px;
         overflow: hidden;
         position: relative;
         display: inline-block;
@@ -77,7 +78,7 @@ $border-gray: #bdbdbd;
         @include border-solid(1px, $border-gray);
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
         .movie-title {
-          margin: 11px 20px 0;
+          margin-top: 11px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -87,7 +88,7 @@ $border-gray: #bdbdbd;
           color: $font-black;
         }
         .movie-info {
-          margin: 12px 20px 18px;
+          margin: 12px 0 18px;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
@@ -107,6 +108,10 @@ $border-gray: #bdbdbd;
           dd {
             color: $font-black;
           }
+          .movie-date{
+            width: 100%;
+            justify-content: flex-start;
+          }
           .movie-star {
             position: relative;
             display: flex;
@@ -120,8 +125,6 @@ $border-gray: #bdbdbd;
               width: 14px;
               height: 14px;
               background-image: url("../img/star.png");
-              // 이부분 padding top으로 비율 밪추는 반응형으로 바꾸기
-              // media query로 그리드 담는 박스 너비 조절하는 코드 없애는 것 가능!
               background-position: center center;
               background-repeat: no-repeat;
               background-size: cover;
@@ -129,11 +132,11 @@ $border-gray: #bdbdbd;
           }
         }
         .btn-wrap {
-          margin-top: 18px;
+          margin: 18px -20px 0;
           display: flex;
           justify-content: center;
           .func-btn {
-            width: 110px;
+            width: 50%;
             background-color: $bg-color;
             border-top: 1px solid $border-gray;
             font-weight: 500;
@@ -161,13 +164,17 @@ $border-gray: #bdbdbd;
         li:nth-child(#{$index})::before {
           content: "";
           display: block;
-          margin: 19px 20px 11px;
+          padding-top: 139%;
+          width:100%;
+          margin: 19px 0 11px;
           top: 0px;
           left: 0px;
-          height: 250px;
           @include border-rad(sm);
           background-image: url("../img/poster_#{$index}.png");
-          background-size: 100% 250px;
+          // 이부분 padding top으로 비율 밪추는 반응형으로 바꾸기
+          // media query로 그리드 담는 박스 너비 조절하는 코드 없애는 것 가능!
+          background-position: center;
+          background-size: cover;
           background-repeat: no-repeat;
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
@@ -239,20 +246,8 @@ $border-gray: #bdbdbd;
   }
 }
 
-@media screen and (max-width:1075px){
-  .cont-cinema{
-    max-width: 833px;
-  }
-}
-@media screen and (max-width:833px) {
-  .cont-cinema{
-    max-width: 590px;
-  }
-}
+
 @media screen and (max-width:590px) {
-  .cont-cinema{
-    max-width: 345px;
-  }
   .cinema_nav {
     flex-direction: column;
     gap: 5px;

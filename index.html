@@ -38,8 +38,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
           <li>
@@ -63,8 +63,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
           <li>
@@ -88,8 +88,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
           <li>
@@ -113,8 +113,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
           <li>
@@ -138,8 +138,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
           <li>
@@ -163,8 +163,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
           <li>
@@ -188,8 +188,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
           <li>
@@ -213,8 +213,8 @@
               </dl>
             </div>
             <div class="btn-wrap">
-              <button class="func-btn">예매하기</button>
-              <button class="func-btn">예고편</button>
+              <button id="reserve-btn" class="func-btn">예매하기</button>
+              <button id="preview-btn" class="func-btn">예고편</button>
             </div>
           </li>
         </ul>
@@ -262,5 +262,11 @@
         </section>
       </div>
     </footer>
+    <script>
+      let reserveBtn = document.getElementById("reserve-btn");
+      reserveBtn.addEventListener("click",()=>{alert("예매하기");});
+      let previewBtn = document.getElementById("preview-btn");
+      previewBtn.addEventListener("click",()=>{alert("예고편");});
+    </script>
   </body>
 </html>

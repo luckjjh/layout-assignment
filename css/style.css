@@ -75,6 +75,7 @@
 }
 
 .cont-cinema .cinema-list-box .cinema-list li {
+  padding: 0 20px;
   overflow: hidden;
   position: relative;
   display: inline-block;
@@ -87,7 +88,7 @@
 }
 
 .cont-cinema .cinema-list-box .cinema-list li .movie-title {
-  margin: 11px 20px 0;
+  margin-top: 11px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -98,7 +99,7 @@
 }
 
 .cont-cinema .cinema-list-box .cinema-list li .movie-info {
-  margin: 12px 20px 18px;
+  margin: 12px 0 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,6 +134,13 @@
   color: #000000;
 }
 
+.cont-cinema .cinema-list-box .cinema-list li .movie-info .movie-date {
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .cont-cinema .cinema-list-box .cinema-list li .movie-info .movie-star {
   position: relative;
   display: -webkit-box;
@@ -156,7 +164,7 @@
 }
 
 .cont-cinema .cinema-list-box .cinema-list li .btn-wrap {
-  margin-top: 18px;
+  margin: 18px -20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,7 +174,7 @@
 }
 
 .cont-cinema .cinema-list-box .cinema-list li .btn-wrap .func-btn {
-  width: 110px;
+  width: 50%;
   background-color: #f2f2f2;
   border-top: 1px solid #bdbdbd;
   font-weight: 500;
@@ -194,13 +202,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(1)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_1.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -209,13 +219,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(2)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_2.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -224,13 +236,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(3)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_3.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -239,13 +253,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(4)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_4.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -254,13 +270,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(5)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_5.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -269,13 +287,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(6)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_6.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -284,13 +304,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(7)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_7.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -299,13 +321,15 @@
 .cont-cinema .cinema-list-box .cinema-list li:nth-child(8)::before {
   content: "";
   display: block;
-  margin: 19px 20px 11px;
+  padding-top: 139%;
+  width: 100%;
+  margin: 19px 0 11px;
   top: 0px;
   left: 0px;
-  height: 250px;
   border-radius: 10px;
   background-image: url("../img/poster_8.png");
-  background-size: 100% 250px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -393,22 +417,7 @@
   margin-left: auto;
 }
 
-@media screen and (max-width: 1075px) {
-  .cont-cinema {
-    max-width: 833px;
-  }
-}
-
-@media screen and (max-width: 833px) {
-  .cont-cinema {
-    max-width: 590px;
-  }
-}
-
 @media screen and (max-width: 590px) {
-  .cont-cinema {
-    max-width: 345px;
-  }
   .cinema_nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
